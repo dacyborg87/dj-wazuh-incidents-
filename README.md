@@ -1,43 +1,61 @@
-# DJ Wazuh Incident & Detection Case Studies
+# DJ Wazuh Incidents & Labs (Home SOC Portfolio)
 
-This repository documents my ongoing journey running and maturing my **home SOC environment** using Wazuh.  
-Rather than treating my lab as a “toy,” I operate it the way a real SOC would: continuously tuning detections, validating signals, analyzing security telemetry, and documenting investigations in a professional, DFIR-style format.
-
-Each incident report in this repo follows a structured SOC workflow, including:
-- Executive summary
-- Timeline of events
-- MITRE ATT&CK mapping & interpretation
-- Detection accuracy validation
-- AI-assisted threat classification
-- SOC / DFIR analyst narrative
-- Recommended response actions
-- Lessons learned
-
-These reports reflect the same type of work analysts perform in professional environments — but driven through hands-on learning, curiosity, and continuous improvement.
+This repo contains **SOC-style incident writeups** and **hands-on Wazuh labs** built in my home security lab.  
+Everything is documented with repeatable steps, evidence, and conclusions—like you’d do in a real SOC.
 
 ---
 
-## 📂 Incident Library
+## What you’ll find here
 
-| Incident | Status | Description |
-|--------|--------|-------------|
-| INCIDENT_001 | ✅ Complete | Agent tampering & privilege escalation activity investigation (macOS + Ubuntu Wazuh) |
+### Incidents
+- Incident reports based on alerts from **Wazuh / Rootcheck / Syscheck / SIEM** sources.
+- Each incident focuses on: **alert context → investigation → evidence → conclusion → remediation**.
 
----
-
-## 🎯 Goals of This Project
-- Build strong blue-team thinking
-- Improve detection engineering skills
-- Practice real SOC workflows
-- Produce professional-grade documentation
-- Grow toward DFIR / SOC analyst readiness
+### Labs
+- Repeatable labs that validate detections, tune false positives, and document the workflow end-to-end.
 
 ---
 
-## 🤝 Feedback Welcome
-If you work in:
-SOC operations • Detection Engineering • Blue Team • DFIR • Threat Hunting
+## Repository structure
 
-I’d love your feedback, collaboration, or connection.
+
+├── INCIDENT_001.md
+├── lab-002-rootcheck-md5sum/
+│   ├── LAB-002.md
+│   ├── alert_hits.txt
+│   └── screenshots/
+└── README.md
+
 
 ---
+
+## Featured work
+
+### ✅ Lab 002 — Rootcheck “Trojaned File” Alert (md5sum)
+**Goal:** Investigate a Wazuh Rootcheck alert claiming `/usr/bin/md5sum` was trojaned and determine if it’s a true compromise or false positive.
+
+**Highlights:**
+- Captured the **structured SIEM JSON alert**
+- Verified the file path and proved `/usr/bin/md5sum` was a **symlink**
+- Identified the root cause: **Rust (cargo) coreutils path mismatch**
+- Documented evidence + outcome and prepared tuning strategy
+
+➡️ Start here: `lab-002-rootcheck-md5sum/LAB-002.md`
+
+---
+
+## Tools used
+- Wazuh Manager / Dashboard
+- Rootcheck / Syscheck
+- Linux CLI (grep, sed, file, stat, sha256sum)
+
+---
+
+## Notes
+- All investigations are performed in a **learning lab environment**.
+- Screenshots are included where they strengthen evidence and readability.
+
+---
+
+## Author
+DJ (dacyborg87)
