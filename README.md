@@ -5,7 +5,7 @@ Everything is documented with repeatable steps, evidence, and conclusions—like
 
 ## Contents
 - [Incident 001](INCIDENT_001.md)
-- [Lab 002 – Rootcheck md5sum false positive](lab-002-rootcheck-md5sum/LAB-002.md)
+- Lab 002 – Rootcheck md5sum false-positive investigation
 
 ## What you’ll find here
 
