@@ -19,9 +19,8 @@ Everything is documented with repeatable steps, evidence, and conclusions—like
 ### Labs
 - Repeatable labs that validate detections, tune false positives, and document the workflow end-to-end.
 
----
 
-## Repository structure
+
 
 
 ## Repository structure
