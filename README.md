@@ -22,11 +22,18 @@ Everything is documented with repeatable steps, evidence, and conclusions—like
 ## Repository structure
 
 
+## Repository structure
+
 ├── INCIDENT_001.md
-├── lab-002-rootcheck-md5sum/
-│   ├── LAB-002.md
-│   ├── alert_hits.txt
-│   └── screenshots/
+├── incidents/
+│   ├── INCIDENT_002/
+│   │   ├── report.md
+│   │   └── artifacts/
+│   │       └── alert_hits.txt
+│   ├── INCIDENT_003/
+│   │   ├── report.md
+│   │   └── artifacts/
+│   │       └── screenshots/
 └── README.md
 
 
