@@ -51,7 +51,7 @@ Everything is documented with repeatable steps, evidence, and conclusions—like
 - Identified the root cause: **Rust (cargo) coreutils path mismatch**
 - Documented evidence + outcome and prepared tuning strategy
 
-➡️ Start here: [Lab 002 – Rootcheck md5sum false-positive investigation](lab-002-rootcheck-md5sum/LAB-002.md)
+➡️ Start here: [Lab 002 – Rootcheck md5sum false-positive investigation](incidents/INCIDENT_002/report.md)
 
 ---
 
