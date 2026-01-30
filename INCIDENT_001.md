@@ -1,4 +1,4 @@
-# Incident 001 – Wazuh Agent Tampering & Privileged Access (Lab Validation)
+# INCIDENT_001 — Wazuh Agent Tampering & Privileged Access
 
 **Author:** Dominic “DJ” Jones  
 **Date:** 2025-12-23  
