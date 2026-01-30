@@ -8,7 +8,9 @@ Everything is documented with repeatable steps, evidence, and conclusions—like
 - [Incident 001 – Wazuh Agent Tampering & Privileged Access](INCIDENT_001.md)
 - [Incident 004 – SIEM Platform Validation & UI Outage Recovery](incidents/INCIDENT_004/report.md)
 - [Lab 002 – Rootcheck md5sum false positive](Lab_002_Rootcheck_md5sum_false_positive.md)
-- [Lab 003 – Windows agent + Sysmon API](Lab_003_Windows_agent_Sysmon_API.md)    
+- [Lab 003 – Windows agent + Sysmon API](Lab_003_Windows_agent_Sysmon_API.md)
+
+  
 ⭐ **Featured lab:** Lab 002 documents a real-world Rootcheck false positive caused by Rust coreutils symlinks and demonstrates structured SIEM triage and validation.
 
 ## What you’ll find here
