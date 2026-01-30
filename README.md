@@ -32,7 +32,7 @@ Everything is documented with repeatable steps, evidence, and conclusions—like
 | Lab 002 | Rootcheck Analysis, False Positive Validation, File Integrity Monitoring, Linux Path Analysis, SIEM Tuning |
 | Lab 003 | Windows Agent Deployment, Sysmon Integration, Log Ingestion, API Validation, Endpoint Telemetry |
 
->>>>>>> dd621c5 (Add badges and incident skills matrix to README)
+
 ⭐ **Featured lab:** Lab 002 documents a real-world Rootcheck false positive caused by Rust coreutils symlinks and demonstrates structured SIEM triage and validation.
 
 ## What you’ll find here
