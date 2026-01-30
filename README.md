@@ -33,18 +33,18 @@ Everything is documented with repeatable steps, evidence, and conclusions—like
 | Lab 003 | Windows Agent Deployment, Sysmon Integration, Log Ingestion, API Validation, Endpoint Telemetry |
 
 
-⭐ **Featured lab:** Lab 002 documents a real-world Rootcheck false positive caused by Rust coreutils symlinks and demonstrates structured SIEM triage and validation.
+## Featured work
 
-## What you’ll find here
+### ⭐ Lab 002 — Rootcheck “Trojaned File” Alert (md5sum)
+**Goal:** Triage a Rootcheck alert flagging `/usr/bin/md5sum` as “trojaned” and determine if it’s a true compromise or a false positive.
 
-### Incidents
-- Incident reports based on alerts from **Wazuh / Rootcheck / Syscheck / SIEM** sources.
-- Each incident focuses on: **alert context → investigation → evidence → conclusion → remediation**.
+**Highlights:**
+- Parsed and validated Wazuh alert context (rule, decoder, fields)
+- Verified file path + ownership and confirmed Rust coreutils symlink behavior
+- Identified the root cause and documented evidence-based conclusions
+- Captured tuning notes to reduce future false positives
 
-### Labs
-- Repeatable labs that validate detections, tune false positives, and document the workflow end-to-end.
-
-
+📄 Full write-up: [Lab 002 – Rootcheck md5sum false positive](incidents/INCIDENT_002/report.md)
 
 
 
@@ -63,7 +63,7 @@ Everything is documented with repeatable steps, evidence, and conclusions—like
 └── README.md
 
 
----
+
 
 ## Featured work
 
@@ -78,23 +78,22 @@ Everything is documented with repeatable steps, evidence, and conclusions—like
 
 ➡️ Start here: [Lab 002 – Rootcheck md5sum false-positive investigation](incidents/INCIDENT_002/report.md)
 
----
+
 
 ## Tools used
-- Wazuh Manager / Dashboard
-- Rootcheck / Syscheck
+- Wazuh (Manager, Dashboard, Indexer)
+- Rootcheck / Syscheck (FIM)
 - Linux CLI (grep, sed, file, stat, sha256sum)
-
----
+- Git + GitHub (documentation + version control)
 
 ## Notes
 - All investigations are performed in a **learning lab environment**.
 - Screenshots are included where they strengthen evidence and readability.
 
 ## Planned labs
-- Windows agent + Sysmon telemetry in Wazuh
-- Log pipeline tuning and dashboard queries
-- Detection rule validation and false-positive reduction
+- Windows agent + Sysmon telemetry expansion
+- Dashboard queries + log pipeline tuning
+- Detection validation + false-positive reduction workflow
 
 ## Author
 DJ (dacyborg87)
