@@ -1,3 +1,10 @@
+![Wazuh](https://img.shields.io/badge/Wazuh-SIEM-blue)
+![SIEM](https://img.shields.io/badge/SIEM-Operations-purple)
+![SOC](https://img.shields.io/badge/SOC-Analyst-green)
+![Linux](https://img.shields.io/badge/Linux-Administration-yellow)
+![MITRE](https://img.shields.io/badge/MITRE-ATT%26CK-red)
+![Git](https://img.shields.io/badge/Git-Version%20Control-orange)
+
 # DJ Wazuh Incidents & Labs (Home SOC Portfolio)
 
 This repo contains **SOC-style incident writeups** and **hands-on Wazuh labs** built in my home security lab.  
@@ -10,7 +17,22 @@ Everything is documented with repeatable steps, evidence, and conclusions—like
 - [Lab 002 – Rootcheck md5sum false positive](Lab_002_Rootcheck_md5sum_false_positive.md)
 - [Lab 003 – Windows agent + Sysmon API](Lab_003_Windows_agent_Sysmon_API.md)
 
-  
+
+## Incident Skills Matrix
+
+| Incident | Core Skills Demonstrated |
+|-----------|----------------------------|
+| Incident 001 | Wazuh Agent Security, Privilege Escalation Analysis, Host-Based IDS, Log Analysis, Endpoint Hardening |
+| Incident 004 | SIEM Troubleshooting, Service Validation, Port Enumeration, VM Networking, Dashboard/Indexer Architecture, Root Cause Analysis |
+
+## Lab Skills Matrix
+
+| Lab | Core Skills Demonstrated |
+|-----|----------------------------|
+| Lab 002 | Rootcheck Analysis, False Positive Validation, File Integrity Monitoring, Linux Path Analysis, SIEM Tuning |
+| Lab 003 | Windows Agent Deployment, Sysmon Integration, Log Ingestion, API Validation, Endpoint Telemetry |
+
+>>>>>>> dd621c5 (Add badges and incident skills matrix to README)
 ⭐ **Featured lab:** Lab 002 documents a real-world Rootcheck false positive caused by Rust coreutils symlinks and demonstrates structured SIEM triage and validation.
 
 ## What you’ll find here
