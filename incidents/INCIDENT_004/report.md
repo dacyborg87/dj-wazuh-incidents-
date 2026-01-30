@@ -36,7 +36,7 @@ Confirmed alert ingestion and SIEM functionality using the Discover view with ac
 
 ## Validation Evidence
 - Screenshot of Wazuh Discover page showing alert ingestion and filtering:
-  - File: artifacts/screenshots/wazuh_discover.png
+  - File: artifacts/screenshots/wazuh_dashboard_discover.png
 
 ## Lessons Learned
 - SIEM platforms are multi-service stacks: Manager, Dashboard, and Indexer have different roles and ports.
