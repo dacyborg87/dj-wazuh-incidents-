@@ -4,25 +4,22 @@
 **Date:** 2025-12-23  
 **Environment:** Home SOC Lab (Wazuh + Ubuntu + macOS)
 
----
+
 
 ## 1. Executive Summary
 
-During routine troubleshooting and configuration of my Wazuh deployment in my home SOC lab, the SIEM generated multiple alerts indicating:
+The monitoring environment generated multiple alerts indicating behavior consistent with defense evasion and privilege escalation. Detected activity included AppArmor enforcement events, repeated privileged sudo sessions by an administrative account, and multiple Wazuh agent stop/start events mapped to MITRE ATT&CK T1562.001 – Disable or Modify Tools.
 
-- AppArmor blocking extra capabilities for the CUPS printing service on the Wazuh manager.
-- Repeated privileged `sudo` sessions by user `dacyborg` on the Wazuh manager (`wazuh-1`).
-- Multiple stop/start events for the Wazuh agent on my macOS endpoint (`DJ-Mac`), mapped to MITRE ATT&CK technique **T1562.001 – Disable or Modify Tools**.
+Investigation confirmed the activity was authorized administrative maintenance involving agent configuration edits and service restarts. No malicious behavior or unauthorized access was identified.
 
-After analysis, all activity was determined to be **legitimate administrative maintenance** that I performed while tuning and restarting the agent. However, this incident **validates that the Wazuh lab correctly detects**:
+This incident validates that monitoring controls correctly detect:
+	•	Security tool tampering signals
+	•	Privileged access escalation
+	•	Valid account activity tied to sensitive actions
 
-- Defense-evasion–like behavior (tool tampering).
-- Privileged escalation via `sudo` to root.
-- Valid account usage patterns tied to powerful actions.
+Although benign in context, the alert pattern closely mirrors behavior that would be high-risk in a production environment. The event demonstrates effective detection capability and highlights the importance of correlating privileged activity with authorized maintenance.
 
-This report documents the alerts, AI-assisted threat classification, and my own SOC-style analysis.
 
----
 
 ## 2. Environment
 
@@ -37,7 +34,7 @@ This report documents the alerts, AI-assisted threat classification, and my own 
 
 - `/var/ossec/logs/alerts/alerts.json` on the Wazuh manager.
 
----
+
 
 ## 3. Timeline of Key Events (Condensed)
 
@@ -70,7 +67,7 @@ This report documents the alerts, AI-assisted threat classification, and my own 
       - `tail -n 40 /var/ossec/logs/alerts/alerts.json`
     - Followed by PAM session close alerts.
 
----
+
 
 ## 4. Alerts and MITRE Mapping
 
@@ -89,7 +86,7 @@ This report documents the alerts, AI-assisted threat classification, and my own 
 - No follow-on suspicious behavior observed.
 - Treated as **low-risk hardening noise**, but useful to confirm that mandatory access control is functional.
 
----
+
 
 ### 4.2 Sudo Sessions and Privilege Escalation
 
@@ -114,7 +111,7 @@ This report documents the alerts, AI-assisted threat classification, and my own 
   - Editing the agent configuration.
 - Classified as **legitimate but sensitive** activity that should always be monitored and correlated with change management.
 
----
+
 
 ### 4.3 Wazuh Agent Stop/Start on DJ-Mac
 
@@ -132,7 +129,6 @@ This report documents the alerts, AI-assisted threat classification, and my own 
 - In this case, each stop/start pair matches my **intentional restarts** while editing `ossec.conf` and troubleshooting connectivity/FIM.
 - Even though the root cause here is benign, this proves the lab successfully detects behavior that would be very suspicious in production.
 
----
 
 ## 5. AI Threat Classification (Project Wensday)
 
@@ -164,7 +160,7 @@ I used my AI assistant (“Project Wensday”) to classify the alerts in this ba
 - **Overall Severity in Context:** **Low**
 - **Potential Severity if Unexplained / in Production:** **Medium–High**
 
----
+
 
 ## 6. SOC-Style Analysis
 
@@ -186,7 +182,7 @@ From a SOC analyst’s perspective:
      - Restarting the Wazuh agent
      - Tailing `alerts.json` to verify functionality.
 
----
+
 
 ## 7. Recommended Response & Hardening Actions
 
@@ -212,7 +208,7 @@ If this pattern appeared in a **real production environment**, I would recommend
      - Evidence that monitoring is functioning.
      - A reference pattern for future, possibly malicious, tool tampering.
 
----
+
 
 ## 8. Lessons Learned & Portfolio Value
 
