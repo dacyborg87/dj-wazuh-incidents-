@@ -16,7 +16,7 @@ Everything is documented with repeatable steps, evidence, and conclusions—like
 - [Incident 004 – SIEM Platform Validation & UI Outage Recovery](incidents/INCIDENT_004/report.md)
 - [Lab 002 – Rootcheck md5sum false positive](incidents/INCIDENT_002/report.md)
 - [Lab 003 – Windows agent + Sysmon API](incidents/INCIDENT_003/report.md)
-
+- [Lab 005 – Brute Force Detection (Wazuh)](lab-005-brute-force-detection-wazuh/)
 
 ## Incident Skills Matrix
 
