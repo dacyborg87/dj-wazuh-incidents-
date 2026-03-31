@@ -80,20 +80,29 @@ Wazuh successfully detected abnormal system behavior and generated alerts, confi
 
 ### Screenshots
 
-#### 1. PowerShell Command
-This shows the PowerShell command used to simulate suspicious activity.
-![PowerShell Command](01-powershell-command.png)
+#### 1. Wazuh Alerts Spike (Post Execution)
+This screenshot shows Wazuh detecting multiple system and PowerShell-related events on the Windows endpoint. Alerts include Windows system errors (Rule ID 61102), shell execution issues (Rule ID 60778), and repeated system activity, indicating abnormal behavior triggered during the lab simulation.
+![Wazuh Alerts](01-powershell-command.png)
 
-#### 2. Wazuh Alerts
-This shows the alerts generated in Wazuh from the PowerShell activity.
-![Wazuh Alerts](02-wazuh-alerts.png)
+#### 2. Pre-Activity Alerts (Baseline)
+This screenshot shows system activity approximately 8–10 minutes before the main PowerShell event. Wazuh detected multiple Windows system errors (Rule ID 61102), along with higher severity “Multiple System Error Events” (Rule ID 61110).
+
+These alerts appear more distributed and less concentrated, representing baseline system instability prior to the simulated PowerShell activity. This provides context for comparison with the later spike in alerts observed during the execution phase.
+![Pre-Activity Alerts](02-wazuh-alerts.png)
 
 #### 3. Error Output
-This shows the failed execution and resulting shell error.
+This shows the failed PowerShell execution attempt and resulting shell error during the simulation.
 ![Error Output](03-shell-error.png)
 
 ### Key Takeaway
 
-Even failed attack attempts leave traces.
+Even failed PowerShell execution attempts generate detectable system activity. By analyzing Wazuh alerts over time, it becomes possible to identify patterns, correlate events, and distinguish between baseline system behavior and abnormal spikes. This highlights the importance of continuous monitoring and log analysis in detecting early signs of potential threats.
 
-Monitoring PowerShell activity and correlating system events is critical for early detection of potential threats.
+
+### Conclusion
+
+This lab demonstrated how PowerShell activity, even when unsuccessful, can trigger multiple detectable events within a monitored environment. By comparing baseline system behavior to a spike in alerts, it becomes clear how Wazuh can be used to identify and investigate suspicious activity in real time.
+
+The correlation between system errors, shell execution issues, and increased alert frequency shows how seemingly small events can form a larger pattern. This reinforces the importance of continuous monitoring, alert analysis, and understanding event timelines when working in a SOC environment.
+
+Overall, this lab highlights how analysts can use tools like Wazuh to detect, analyze, and respond to potential threats before they escalate.
