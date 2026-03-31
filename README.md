@@ -21,59 +21,60 @@ Everything is documented with repeatable steps, evidence, and conclusions—like
 
 ## Core Skills Demonstrated
 
-- SIEM monitoring and alert triage
-- Wazuh dashboard investigation
-- Timeline correlation and event analysis
-- Windows endpoint telemetry validation
-- Sysmon integration and log ingestion
-- Rootcheck and false positive analysis
-- PowerShell-related detection review
-- Linux command-line investigation
-- Evidence-based documentation
-- Git and GitHub workflow for security reporting
+- SIEM monitoring and alert triage (Wazuh)
+- Timeline-based investigation and event correlation
+- Windows endpoint telemetry analysis
+- Sysmon integration and log validation
+- PowerShell activity detection and review
+- Rootcheck and false positive investigation
+- Linux command-line analysis and troubleshooting
+- Security event interpretation and pattern recognition
+- SOC-style documentation and reporting
+- Git and GitHub workflow for technical projects
   
 ## Lab Skills Matrix
 
 | Lab | Focus Area | Skills Demonstrated |
 |-----|------------|---------------------|
-| LAB 002 | Rootcheck False Positive Investigation | Rootcheck analysis, false positive validation, file integrity monitoring, Linux path analysis, SIEM tuning |
-| LAB 003 | Windows Agent + Sysmon API | Windows agent deployment, Sysmon integration, log ingestion, API validation, endpoint telemetry |
-| LAB 006 | PowerShell Suspicious Activity Detection | PowerShell alert analysis, timeline correlation, baseline vs spike comparison, Windows event review, SOC-style investigation writeup |
+| LAB 002 | Rootcheck Investigation | File integrity monitoring, false positive validation, Linux analysis, alert interpretation |
+| LAB 003 | Windows + Sysmon | Endpoint onboarding, Sysmon logging, API validation, telemetry analysis |
+| LAB 006 | PowerShell Detection | Alert correlation, baseline vs spike analysis, PowerShell monitoring, SOC investigation workflow |
 
 ## Featured Work
 
 ### ✅ LAB 006 — PowerShell Suspicious Activity Detection
-Goal: Simulate suspicious PowerShell behavior on a Windows endpoint and analyze how Wazuh captures pre-activity, alert spikes, and failed execution traces.
+Simulated suspicious PowerShell behavior and analyzed how Wazuh captures baseline activity, alert spikes, and failed execution traces.
 
-Highlights:
-- Compared baseline alerts to post-execution alert spikes
-- Correlated Windows system errors, shell-related alerts, and timing of suspicious activity
-- Documented how even failed PowerShell execution attempts still leave detectable evidence
-- Built a SOC-style writeup using screenshots, event analysis, and conclusions
+- Compared pre-activity alerts to post-execution spikes
+- Correlated system errors, shell activity, and timing of events
+- Demonstrated how failed PowerShell execution still generates detectable logs
+- Built a SOC-style investigation with timeline-based analysis
 
-➡️ Start here: [LAB 006 – PowerShell Suspicious Activity Detection](./LAB-006-powershell-suspicious-activity)
+➡️ [View Lab 006](./LAB-006-powershell-suspicious-activity)
 
-### ✅ LAB 003 — Windows Agent + Sysmon API Validation
-Goal: Deploy a Windows endpoint into Wazuh, validate Sysmon telemetry, and confirm log ingestion through the API.
 
-Highlights:
-- Installed and validated the Windows Wazuh agent
-- Integrated Sysmon for deeper endpoint telemetry
-- Confirmed event visibility through the Wazuh API
-- Documented endpoint onboarding and verification workflow
 
-➡️ View lab: [Lab 003 – Windows agent + Sysmon API](./incidents/LAB-003)
+### ✅ LAB 003 — Windows Agent + Sysmon Integration
+Deployed a Windows endpoint into Wazuh and validated Sysmon telemetry and API ingestion.
 
-### ✅ LAB 002 — Rootcheck md5sum False Positive Investigation
-Goal: Investigate a Wazuh Rootcheck alert claiming `/usr/bin/md5sum` was trojaned and determine whether it was malicious or a false positive.
+- Installed and validated Wazuh Windows agent
+- Integrated Sysmon for enhanced logging visibility
+- Verified event ingestion through Wazuh API
+- Documented endpoint onboarding and validation workflow
 
-Highlights:
-- Parsed the alert and validated the affected file path
-- Confirmed symlink behavior and identified the true cause
-- Ruled out compromise through evidence-based validation
-- Documented tuning value for reducing future false positives
+➡️ [View Lab 003](./incidents/LAB-003)
 
-➡️ View lab: [Lab 002 – Rootcheck md5sum false positive](./incidents/LAB-002)
+
+
+### ✅ LAB 002 — Rootcheck False Positive Investigation
+Investigated a Wazuh Rootcheck alert involving `/usr/bin/md5sum` and determined it was a false positive.
+
+- Analyzed file integrity alert behavior
+- Validated system file paths and symlink structure
+- Confirmed no compromise through investigation
+- Demonstrated false positive analysis and validation
+
+➡️ [View Lab 002](./incidents/LAB-002)
 
 **Highlights:**
 - Parsed and validated Wazuh alert context (rule, decoder, fields)
@@ -106,17 +107,18 @@ Highlights:
 
 ## Notes
 
-- All investigations and labs in this repository are performed in a personal home lab environment.
-- Each writeup is built to reflect SOC-style documentation with repeatable steps, evidence, screenshots, and conclusions.
-- The goal of this repo is to show practical detection, investigation, and analysis skills as they continue to improve over time.
+- All labs are performed in a personal home SOC environment using Wazuh.
+- Each lab focuses on detection, investigation, and real-world security concepts.
+- Writeups are structured to reflect SOC-style documentation with clear analysis and conclusions.
+- This repository is continuously evolving as new labs and skills are developed.
 
 ## Planned Labs
 
-- Dashboard query creation and custom alert hunting workflows
-- Log pipeline tuning and alert noise reduction
-- Additional PowerShell detection validation scenarios
-- Windows persistence and suspicious process investigation labs
-- Expanded incident-style writeups using Wazuh + Sysmon telemetry
+- Custom Wazuh dashboard queries and alert hunting
+- Log tuning and noise reduction techniques
+- Advanced PowerShell detection scenarios
+- Windows persistence and process investigation
+- Multi-stage incident simulation and response workflow
 
 ## Author
 DJ (dacyborg87)
