@@ -80,14 +80,17 @@ Wazuh successfully detected abnormal system behavior and generated alerts, confi
 
 ### Screenshots
 
-#### 1. Suspicious PowerShell Command
+#### 1. PowerShell Command
+This shows the PowerShell command used to simulate suspicious activity.
 ![PowerShell Command](01-powershell-command.png)
 
 #### 2. Wazuh Alerts
+This shows the alerts generated in Wazuh from the PowerShell activity.
 ![Wazuh Alerts](02-wazuh-alerts.png)
 
-#### 3. Shell Error Output
-![Shell Error](03-shell-error.png)
+#### 3. Error Output
+This shows the failed execution and resulting shell error.
+![Error Output](03-shell-error.png)
 
 ### Key Takeaway
 
