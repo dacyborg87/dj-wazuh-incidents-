@@ -17,6 +17,10 @@ Everything is documented with repeatable steps, evidence, and conclusions—like
 - [Lab 002 – Rootcheck md5sum false positive](incidents/INCIDENT_002/report.md)
 - [Lab 003 – Windows agent + Sysmon API](incidents/INCIDENT_003/report.md)
 - [Lab 005 – Brute Force Detection (Wazuh)](lab-005-brute-force-detection-wazuh/)
+- [LAB 006 - PowerShell Suspicious Activity Detection**
+  - Simulated suspicious PowerShell execution and analyzed Wazuh alerts
+  - Identified baseline vs spike behavior using timeline correlation
+  - Demonstrated detection of failed execution attempts
 
 ## Incident Skills Matrix
 
